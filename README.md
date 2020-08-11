@@ -1,5 +1,6 @@
 # hexo-theme-navi
 
+![version](https://img.shields.io/github/package-json/v/NatsunoZero/hexo-theme-navi)
 ![license](https://img.shields.io/github/license/NatsunoZero/hexo-theme-navi?color=FF5531)
 
 
