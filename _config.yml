@@ -1,0 +1,69 @@
+config:
+  title: # 这里填写网页标题
+  name: # 这里是作者名称，也就是头像下边的文字
+  intro: # 这里是网页介绍
+  welcome: # 这里是介绍下边的内容（可不填）
+  favicon: # 这里是浏览器图标
+  icon: # 这里是主页图标
+  mask_color: rgba(60,91,147,.6) # 这里是背景的颜色遮罩层
+  apple_touch_icon: # 这里是苹果设备特有的图像标签（可以和favicon设置成一样的内容）
+
+  
+background_image:
+  timer: 15 # 自动换背景时长（不填写不启用）
+  img: # 可以写一个或者多个，多个会在每次刷新或载入网页时随机选择，也可以使用api接口
+    - https://xxx.JPG
+    - https://xxx.JPG
+
+hr: rgba(255,255,255,.3) # 网页中分割线的颜色
+
+# 认证图标（头像旁边）
+identify_icon:
+  enable: false
+  icon: /img/dahuiyuan.svg # 可自定义
+  text: 年度大会员 # 建议跟随图标内容进行自定义
+
+
+# Google Analytics
+google_analytics:  # 改成你的google分析id，如 UA-xxxxxxxxx-x
+
+# hitokoto
+hitokoto: # 加载一言的功能
+  enable: true
+  loadmoji: 『一言加载中…』
+
+# mobile menu
+mobile_menu: true # 手机版菜单，可不启用
+
+button:
+  large:
+    - 博客（按钮名称） || https://blog（改成你自己的链接） || 鼠标覆盖后显示的信息
+    - 关于 || https://blog.cha.moe/about/index.html || 关于我的信息
+  small:
+    - fab fa-github || https://github.com/NatsunoZero || github我是新手
+    - fas fa-envelope || mailto:xx@xx.com || 要给我发邮件么？
+    - fas fa-rss || https://blog.cha.moe/atom.xml || 点击这里就能订阅我的博客啦
+
+footer:
+  owner: # 拥有者信息
+    enable: true
+    name: RTMACHA
+    since: 2017
+  modified: # 修改者信息
+    enable: false
+    mark: Modified by
+    name: cha.moe
+    link: https://blog.cha.moe/article/3e7a7caf.html
+  ICP: # Chinese ICP License
+    enable: false
+    url: 
+    text: afsddfa
+    icon: /img/icp.png
+
+icon:
+  fontawsome: https://cdn.bootcdn.net/ajax/libs/font-awesome/5.14.0/css/all.min.css # fontawsome图标CDN
+  fonticon: # 这里可以填写你的ali图标地址（如果有）
+
+cdn:
+  jquery: https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js
+  

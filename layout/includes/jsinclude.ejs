@@ -1,0 +1,15 @@
+<% if(theme.cdn.jquery){ %>
+    <script src="<%= theme.cdn.jquery %>"></script>
+<% } %>
+
+<% if(theme.hitokoto.enable){ %>
+    <script src="https://v1.hitokoto.cn/?c=a&c=b&c=d&encode=js&select=%23hitokoto" defer></script>
+<% } %>
+
+<% if(theme.icon.fonticon){ %>
+    <link rel="stylesheet" type="text/css" href="<%= theme.icon.fonticon %>">
+<% } %>
+
+<% if(theme.icon.fontawsome){ %>
+    <link rel="stylesheet" type="text/css" href="<%= theme.icon.fontawsome %>">
+<% } %>

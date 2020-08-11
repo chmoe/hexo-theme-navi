@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <%- include('head.ejs') %>
+</head>
+
+<body>
+    <% if(theme.mobile_menu){ %>
+    <span class="mobile btn-mobile-menu">
+        <i class="btn-mobile-menu_icon fa-list fa"></i>
+        <i class="fa fa-angle-up btn-mobile-close_icon hidden"></i>
+    </span>
+    <% } %>
+    
+    <!-- 引入背景图片 -->
+    <%- include('includes/bgimage.ejs') %>
+
+    <div class="panel-main">
+        <div class="panel-main_inner panel-inverted">
+            <div class="panel-main_content">
+                <a href="#">
+                    <img class="logo" src=" <%= theme.config.icon %>">
+                </a>
+                <% if(theme.identify_icon.enable){ %>
+                <!-- 认证图标 -->
+                <a href="#" class="Weibo_icon_position">
+                    <em title="<%= theme.identify_icon.text %>" id="myAvatar" class="Weibo_icon Weibo_icon_logo"></em>
+                </a>
+                <% } %>
+                <h1 class="panel-title"><a href="#"><%= theme.config.name %></a></h1>
+                <!-- 引入hitokoto -->
+                <%- include('includes/hitokoto.ejs') %>
+
+                <!-- 引入contents -->
+                <%- include('includes/contents.ejs') %>
+
+                <%- include('footer.ejs') %>
+            </div>
+        </div>
+        <!-- <div class="panel-cover--overlay cover-slate"></div> -->
+    </div>
+    <!-- 引入尾部js -->
+    <%- include('includes/jsincludeend.ejs') %>
+
+
+</body>
+
+</html>

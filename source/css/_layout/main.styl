@@ -1,0 +1,208 @@
+
+
+.panel-main {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.panel-main_inner {
+  position: relative;
+  // z-index: 800;
+  display: table-cell;
+  padding: 0 60px;
+  vertical-align: middle;
+}
+.panel-main_content {
+  max-width: 620px;
+  margin: 100px auto;
+  // background: rgba(255,255,255,.7)
+}
+
+.panel-inverted {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  font-weight: 100;
+  a {
+    color: #fff;
+  }
+}
+
+
+.logo {
+  width: 40%;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 1px 1px rgba(0,0,0,.3);
+  box-shadow: 0 0 1px 1px rgba(0,0,0,.3);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  max-width: 170px;
+  margin-bottom: 12px;
+  &:hover {
+    border: 3px solid #5ba4e5;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+.panel-title {
+  margin: 0 0 15px 0;
+  color: #fff;
+  letter-spacing: 4px;
+  font-size: 2.5em;
+}
+
+.panel-subtitle {
+	color: #ccc;
+	letter-spacing: 3px;
+	font-weight: lighter;
+	font-size: 1.2em;
+	line-height: 130%;
+	font-family: ff-tisa-web-pro-1,ff-tisa-web-pro-2,"Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+	-webkit-font-smoothing: antialiased
+}
+
+.panel-cover_divider {
+	margin: 20px auto;
+	width: 50%;
+	border-top: 1px solid $hr-color
+}
+
+.panel-cover_description {
+	margin: 0 30px;
+	font-weight: 400
+}
+
+.cover-navigation {
+	margin-top: 20px
+}
+
+.navigation_item a {
+	padding: 10px 20px;
+	border: 1px solid #df9c81;
+	border-radius: 20px;
+	color: #df9c81;
+	text-shadow: none;
+	letter-spacing: 1px;
+	font-weight: 700;
+	font-size: .9em;
+	-webkit-font-smoothing: antialiased
+}
+
+.navigation_item a:hover {
+	border-color: #d06c44;
+	color: #d06c44
+}
+
+nav {
+	position: relative;
+	display: inline-block
+}
+
+.navigation {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	list-style-type: none
+}
+
+.navigation_item {
+	display: inline-block;
+	margin: 5px 1px 0 0;
+	line-height: 1em
+}
+
+.navigation_item_btn {
+	margin: 2.5px 10px
+}
+
+.navigation_item a {
+	position: relative;
+	display: block;
+	border-color: #fff;
+	color: #fff;
+	opacity: .8;
+	-webkit-transition: all .3s;
+	transition: all .3s
+}
+
+.navigation_item a:hover {
+	border-color: rgba(255,255,255,.3);
+	background: rgba(255,255,255,.3);
+	color: #fff;
+	opacity: 1;
+	-webkit-transition: all .3s;
+	transition: all .3s
+}
+
+.navigation--social a {
+	padding: 6px 8px 6px 9px;
+	border: 0
+}
+
+.navigation--social a .label {
+	display: none
+}
+
+.navigation--social a .icon {
+	display: block;
+	font-size: 1.7em
+}
+
+
+
+.icon {
+	width: 1em;
+	height: 1em;
+	vertical-align: -.15em;
+	fill: currentColor;
+	overflow: hidden
+}
+
+.navigation_item a svg {
+	width: 26px;
+	height: 26px
+}
+
+
+/* 国旗 */
+.Weibo_icon_position {
+    position: relative;
+    right: 50px;
+    top: -15px;
+}
+
+.Weibo_icon {
+    display: inline-block;
+    background-image: url($identify-icon);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Weibo_icon_logo {
+    width: 40px;
+    height: 40px;
+    vertical-align: -2px;
+}
+
+
+// .panel-cover--overlay {
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     z-index: 0;
+//     display: block;
+//     background-color: rgba(68, 68, 68, 0.6);
+//     background-image: -webkit-linear-gradient(-410deg, rgba(68, 68, 68, 0.6) 20%, rgba(0, 0, 0, 0.9));
+//     background-image: linear-gradient(140deg, rgba(68, 68, 68, 0.6) 20%, rgba(0, 0, 0, 0.9));
+// }
+// .cover-slate {
+//     background-color: rgba(60, 91, 147, 0.6);
+//     background-image: -webkit-linear-gradient(-410deg, rgba(61, 66, 96, 0.6) 20%, rgba(21, 23, 34, 0.8));
+//     background-image: linear-gradient(140deg, rgba(61, 66, 96, 0.6) 20%, rgba(21, 23, 34, 0.8));
+// }

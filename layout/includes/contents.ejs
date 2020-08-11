@@ -1,0 +1,38 @@
+<hr class="panel-cover_divider">
+<p class="panel-cover_description"><%= theme.config.intro %></p>
+<hr class="panel-cover_divider" style="width: 20%;">
+<p class="panel-cover_description"><%= theme.config.welcome %></p>
+<% if(theme.button){ %>
+<div class="navigation-wrapper">
+    <% if(theme.button.large){ %>
+    <div>
+        <nav class="cover-navigation">
+            <ul class="navigation">
+                <% (theme.button.large||[]).forEach(function(value){ %>
+                <li class="navigation_item navigation_item_btn">
+                    <a href="<%- value.split('||')[1] %>"
+                        title="<%- value.split('||')[2] %>"><%- value.split('||')[0] %></a>
+                </li>
+                <%})%>
+            </ul>
+        </nav>
+    </div>
+    <% } %>
+    <% if(theme.button.small){ %>
+    <div>
+        <nav class="cover-navigation navigation--social">
+            <ul class="navigation">
+                <% (theme.button.small||[]).forEach(function(value){ %>
+                <li class="navigation_item">
+                    <a href="<%- value.split('||')[1] %>" title="<%- value.split('||')[2] %>" target="_blank"
+                        rel="external nofollow noopener noreferrer">
+                        <i class="icon <%- value.split('||')[0] %>"></i>
+                    </a>
+                </li>
+                <%})%>
+            </ul>
+        </nav>
+    </div>
+    <% } %>
+</div>
+<% } %>

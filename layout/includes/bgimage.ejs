@@ -1,0 +1,28 @@
+<header id='bgdiv'>
+    <div class="bgmask"></div>
+</header>
+<% 
+    var len = parseInt(theme.background_image.img.length) 
+    var random = Math.round(Math.random() * (len - 1), 10) 
+%>
+<script>
+    $("header").css("background-image", "url(<%= theme.background_image.img[random] %>)")
+
+    var len = parseInt("<%= theme.background_image.img.length %>")
+    var random = Math.round(Math.random() * (len - 1), 10)
+    var array = "<%= theme.background_image.img %>".split(",")
+</script>
+
+<% if(theme.background_image.timer){ %>
+<script>
+    setInterval(function () {
+
+        // $('#elem').fadeTo('slow', 0.3, function () {
+        //     $(this).css('background-image', 'url(' + $img + ')');
+        // }).fadeTo('slow', 1);
+        random = (random + 1) % len
+        document.getElementById("bgdiv").style.backgroundImage = "URL(" + array[random] + ")"
+        // alert("背景已更换")
+    }, parseInt("<%= theme.background_image.timer %>") * 1000);
+</script>
+<% } %>
