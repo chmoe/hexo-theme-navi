@@ -6,7 +6,7 @@
 
 效果: 👍 [navi](https://cha.moe/)
 
-文档: 📖 [navi Docs](#) （还没写）
+文档: 📖 [navi Docs](http://localhost:4000/article/3e7a7caf.html) <s>（还没写）</s>
 
 一款基于[饭饭's Homepage 2.0](https://github.com/noisky/Homepage)制作的主題
 
@@ -25,3 +25,7 @@ git clone -b master https://github.com/NatsunoZero/hexo-theme-navi.git themes/na
 ```
 theme: navi
 ```
+
+## 项目配置
+
+请您参考这篇文章：[传送门](http://blog.cha.moe/article/3e7a7caf.html)
