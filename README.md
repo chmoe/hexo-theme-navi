@@ -6,7 +6,7 @@
 
 效果: 👍 [navi](https://cha.moe/)
 
-文档: 📖 [navi Docs](http://localhost:4000/article/3e7a7caf.html) <s>（还没写）</s>
+文档: 📖 [navi Docs](http://blog.cha.moe/article/3e7a7caf.html) <s>（还没写）</s>
 
 一款基于[饭饭's Homepage 2.0](https://github.com/noisky/Homepage)制作的主題
 
