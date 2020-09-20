@@ -56,9 +56,11 @@ footer:
     link: https://blog.cha.moe/article/3e7a7caf.html
   ICP: # Chinese ICP License
     enable: false
-    url: 
-    text: afsddfa
-    icon: /img/icp.png
+    icpUrl: https://icp.gov.moe # 备案方链接
+    icpText: 萌ICP备 # 备案方文字
+    url: # 备案号链接
+    text: afsddfa # 备案号
+    icon: /img/icp.png # 备案方图标
 
 icon:
   fontawsome: https://cdn.bootcdn.net/ajax/libs/font-awesome/5.14.0/css/all.min.css # fontawsome图标CDN

@@ -2,25 +2,34 @@
 
     <p id="footer-info" class="inner">
         <% if(theme.footer.owner.enable){%>
-        Copyright &copy;
-        <% if(theme.footer.owner.since != date(new Date(), 'YYYY')){ %>
-        <%= theme.footer.owner.since %> ~
-        <% } %>
-        <%= date(new Date(), 'YYYY') %> <%= theme.footer.owner.name || config.author %>. All rights reserved.<br>
-        <% } %>
-        <%= __('footer.framework') %> <a href="https://hexo.io/" target="_blank">Hexo</a> ||
-        <%= __('footer.theme') %> <a href="https://github.com/NatsunoZero/hexo-theme-navi" target="_blank">navi</a>
-        <% if(theme.footer.modified.enable){ %>
-        || <%= theme.footer.modified.mark %> <a href="<% theme.footer.modified.link %>"
-            target="_blank"><%= theme.footer.modified.name %></a>
-        <% } %>
+            Copyright &copy;
+            <% if(theme.footer.owner.since != date(new Date(), 'YYYY')){ %>
+                <%= theme.footer.owner.since %> ~
+                    <% } %>
+                        <%= date(new Date(), 'YYYY') %>
+                            <%= theme.footer.owner.name || config.author %>. All rights reserved.<br>
+                                <% } %>
+                                    <%= __('footer.framework') %> <a href="https://hexo.io/" target="_blank">Hexo</a> ||
+                                        <%= __('footer.theme') %> <a href="https://github.com/NatsunoZero/hexo-theme-navi" target="_blank">navi</a>
+                                            <% if(theme.footer.modified.enable){ %>
+                                                ||
+                                                <%= theme.footer.modified.mark %>
+                                                    <a href="<% theme.footer.modified.link %>" target="_blank">
+                                                        <%= theme.footer.modified.name %>
+                                                    </a>
+                                                    <% } %>
 
-        <% if(theme.footer.ICP.enable){ %>
-        </br>
-            <a href="<%= theme.footer.ICP.link %> ">
-                <img src="<%= theme.footer.ICP.icon %>" />
-                <%= theme.footer.ICP.text %>
-            </a>
-        <% } %>
+                                                        <% if(theme.footer.ICP.enable){ %>
+                                                            </br>
+                                                            <% if(theme.footer.ICP.icpUrl){ %>
+                                                                <a href="<%= theme.footer.ICP.icpUrl %> " target="_blank">
+                                                                    <%= theme.footer.ICP.icpText %>
+                                                                </a>
+                                                                <% } %>
+                                                                    <img src="<%= theme.footer.ICP.icon %>" />
+                                                                    <a href="<%= theme.footer.ICP.url %> " target="_blank">
+                                                                        <%= theme.footer.ICP.number %>
+                                                                    </a>
+                                                                    <% } %>
     </p>
 </footer>
