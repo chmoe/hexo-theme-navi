@@ -11,22 +11,30 @@
     <meta name="keywords" content="<% config.keywords %>" />
     <% if(theme.config.apple_touch_icon){ %>
         <link rel="apple-touch-icon" href="<% theme.config.apple_touch_icon %>">
-    <% } %>
+        <% } %>
 
 
-    <!-- 配置favicon -->
-    <%- favicon_tag(theme.config.favicon) %>
-    <!-- 引入css中的style.css -->
-    <%- css('css/style') %>
-    <!-- 引入google分析 -->
-    <%- include('includes/google-analytics.ejs') %>
-    <!-- 引入外部js-cdn -->
-    <%- include('includes/jsinclude.ejs') %>
-    <% if(theme.mobile_menu){ %>
-    <!-- 引入mobile菜单 -->
-    <%- css('css/mobilemenu') %>
-    <% } %>
-    <title>
-        <%= theme.config.title %>
-    </title>
+            <!-- 配置favicon -->
+            <%- favicon_tag(theme.config.favicon) %>
+                <!-- 引入css中的style.css -->
+                <%- css('css/style') %>
+                    <!-- 引入google分析 -->
+                    <%- include('includes/google-analytics.ejs') %>
+                        <!-- 引入baidu分析 -->
+                        <%- include('includes/baidu-analytics.ejs') %>
+                            <!-- 引入tencent分析 -->
+                            <%- include('includes/tencent-analytics.ejs') %>
+                                <!-- 引入外部js-cdn -->
+                                <%- include('includes/jsinclude.ejs') %>
+                                    <% if(theme.mobile_menu){ %>
+                                        <!-- 引入mobile菜单 -->
+                                        <%- css('css/mobilemenu') %>
+                                            <% } %>
+                                                <title>
+                                                    <%= theme.config.title %>
+                                                </title>
+                                                <% if(theme.live2d.enable){ %>
+                                                    <script src="<%= theme.live2d.link %>"></script>
+                                                    <% } %>
+
 </head>

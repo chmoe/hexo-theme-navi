@@ -27,6 +27,14 @@ identify_icon:
 # Google Analytics
 google_analytics:  # 改成你的google分析id，如 UA-xxxxxxxxx-x
 
+# Baidu Analytics
+# https://tongji.baidu.com/web/welcome/login
+baidu_analytics: # 改成你的baidu分析id
+
+# Tencent Analytics ID
+# https://mta.qq.com
+tencent_analytics: # 改成你的tencent分析id
+
 # hitokoto
 hitokoto: # 加载一言的功能
   enable: true
@@ -43,6 +51,10 @@ button:
     - fab fa-github || https://github.com/NatsunoZero || github我是新手
     - fas fa-envelope || mailto:xx@xx.com || 要给我发邮件么？
     - fas fa-rss || https://blog.cha.moe/atom.xml || 点击这里就能订阅我的博客啦
+
+live2d:
+  enable: true
+  link: https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js
 
 footer:
   owner: # 拥有者信息
