@@ -5,3 +5,5 @@ $bgmask-color = convert(hexo-config('config.mask_color'))
 $hr-color = convert(hexo-config('hr'))
 $identify-icon-Enable = hexo-config('identify_icon.icon')
 $identify-icon = $identify-icon-Enable ? convert((hexo-config('identify_icon.icon'))) : '/img/blue_icon.svg'
+$verify-icon-Enable = hexo-config('identify_icon_text.enable')
+$verify-icon = $verify-icon-Enable ? convert((hexo-config('identify_icon_text.icon'))) : '/img/twitter-verified-badge.svg'

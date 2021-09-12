@@ -27,7 +27,12 @@
                     <em title="<%= theme.identify_icon.text %>" id="myAvatar" class="Weibo_icon Weibo_icon_logo"></em>
                 </a>
                 <% } %>
-                <h1 class="panel-title"><a href="#"><%= theme.config.name %></a></h1>
+                <!-- 认证图标（文字） -->
+                <div class="panel-title"><a href="#"><%= theme.config.name %></a>
+                <% if(theme.identify_icon_text.enable){ %>
+                <em title="<%= theme.identify_icon_text.text %>" id="myAvatar" class="verify_icon verify_icon_logo"></em>
+                <% } %>
+                </div>
                 <!-- 引入hitokoto -->
                 <%- include('includes/hitokoto.ejs') %>
 
