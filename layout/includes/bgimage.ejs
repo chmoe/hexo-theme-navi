@@ -1,28 +1,29 @@
 <header id='bgdiv'>
     <div class="bgmask"></div>
 </header>
-<% 
-    var len = parseInt(theme.background_image.img.length) 
-    var random = Math.round(Math.random() * (len - 1), 10) 
-%>
-<script>
-    $("header").css("background-image", "url(<%= theme.background_image.img[random] %>)")
 
-    var len = parseInt("<%= theme.background_image.img.length %>")
-    var random = Math.round(Math.random() * (len - 1), 10)
-    var array = "<%= theme.background_image.img %>".split(",")
-</script>
+<% if(theme.background_image.enable){ %>
+    <% 
+        var len = theme.background_image.img.length;
+        var random = Math.floor(Math.random() * len);
+        var array = theme.background_image.img.split(",");
+    %>
 
-<% if(theme.background_image.timer){ %>
-<script>
-    setInterval(function () {
+    <script>
+        $(document).ready(function() {
+            $("header").css("background-image", "url(<%= array[random].trim() %>)");
+        });
 
-        // $('#elem').fadeTo('slow', 0.3, function () {
-        //     $(this).css('background-image', 'url(' + $img + ')');
-        // }).fadeTo('slow', 1);
-        random = (random + 1) % len
-        document.getElementById("bgdiv").style.backgroundImage = "URL(" + array[random] + ")"
-        // alert("背景已更换")
-    }, parseInt("<%= theme.background_image.timer %>") * 1000);
-</script>
+        <% if(theme.background_image.timer){ %>
+            $(document).ready(function() {
+                var len = <%= len %>;
+                var random = <%= random %>;
+
+                setInterval(function () {
+                    random = (random + 1) % len;
+                    $("#bgdiv").css("background-image", "url(" + array[random].trim() + ")");
+                }, <%= theme.background_image.timer %> * 1000);
+            });
+        <% } %>
+    </script>
 <% } %>

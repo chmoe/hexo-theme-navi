@@ -1,35 +1,45 @@
 <footer id="footer">
-
     <p id="footer-info" class="inner">
-        <% if(theme.footer.owner.enable){%>
+        <% if(theme.footer.owner.enable){ %>
             Copyright &copy;
-            <% if(theme.footer.owner.since != date(new Date(), 'YYYY')){ %>
+            <% if(theme.footer.owner.since != new Date().getFullYear()){ %>
                 <%= theme.footer.owner.since %> ~
-                    <% } %>
-                        <%= date(new Date(), 'YYYY') %>
-                            <%= theme.footer.owner.name || config.author %>. All rights reserved.<br>
-                                <% } %>
-                                    <%= __('footer.framework') %> <a href="https://hexo.io/" target="_blank">Hexo</a> ||
-                                        <%= __('footer.theme') %> <a href="https://github.com/chmoe/hexo-theme-navi" target="_blank">navi</a>
-                                            <% if(theme.footer.modified.enable){ %>
-                                                ||
-                                                <%= theme.footer.modified.mark %>
-                                                    <a href="<% theme.footer.modified.link %>" target="_blank">
-                                                        <%= theme.footer.modified.name %>
-                                                    </a>
-                                                    <% } %>
+            <% } %>
+            xxxxxxxx
+            <%= theme.footer.owner.name || config.author %>. All rights reserved.<br>
+        <% } %>
+        <%= __('footer.framework') %> <a href="https://hexo.io/" target="_blank">Hexo</a> ||
+        <%= __('footer.theme') %> <a href="https://github.com/chmoe/hexo-theme-navi" target="_blank">navi</a>
+        <% if(theme.footer.modified.enable){ %>
+            ||
+            <%= theme.footer.modified.mark %>
+            <a href="<%- theme.footer.modified.link %>" target="_blank">
+                <%= theme.footer.modified.name %>
+            </a>
+        <% } %>
 
-                                                        <% if(theme.footer.ICP.enable){ %>
-                                                            </br>
-                                                            <% if(theme.footer.ICP.icpUrl){ %>
-                                                                <a href="<%= theme.footer.ICP.icpUrl %> " target="_blank">
-                                                                    <%= theme.footer.ICP.icpText %>
-                                                                </a>
-                                                                <% } %>
-                                                                    <img src="<%= theme.footer.ICP.icon %>" />
-                                                                    <a href="<%= theme.footer.ICP.url %> " target="_blank">
-                                                                        <%= theme.footer.ICP.number %>
-                                                                    </a>
-                                                                    <% } %>
+        <% if(theme.footer.ICP.enable){ %>
+            </br>
+            <a href="<%= theme.footer.ICP.icpUrl %> " target="_blank">
+                <%= theme.footer.ICP.icpText %>
+            </a>
+            <img src="<%= theme.footer.ICP.icon %>" />
+            <a href="<%= theme.footer.ICP.url %> " target="_blank">
+                <%= theme.footer.ICP.number %>
+            </a>
+        <% } %>
     </p>
 </footer>
+
+<script>
+    // 在页面加载完成后执行
+    window.onload = function() {
+        // 获取当前年份
+        var currentYear = new Date().getFullYear();
+        // 将当前年份插入到相应位置
+        var footerInfo = document.getElementById('footer-info').innerHTML;
+        footerInfo = footerInfo.replace("xxxxxxxx", currentYear);
+        document.getElementById('footer-info').innerHTML = footerInfo;
+    };
+</script>
+
